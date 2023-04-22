@@ -16,7 +16,7 @@ input = {
 
 
 def test_birthdays():
-    greetings = birthdays.reminder(input, datetime(2023, 4, 22))
+    greetings = birthdays.reminder(input, datetime(2023, 4, 22, 22, 12, 0))
     assert greetings == """Monday: Oleg, Helen, Olga
 Tuesday: Anton
 Friday: Nick"""

@@ -1,8 +1,10 @@
 import collections
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date, time
 
 
 def reminder(input, today=datetime.today()):
+    # Force the time to 00:00:00
+    today = datetime.combine(today, time.min)
     # Create a dictionary k=day to greet, v=people to greet
     bdays = collections.defaultdict(list)
     # Next monday is today + 7 days - current weekday
